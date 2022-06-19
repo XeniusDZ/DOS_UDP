@@ -1,0 +1,14 @@
+# Target labels
+ nana-populate
+# Source files and their labels
+C:/Users/Legion/CLionProjects/Project/cmake-build-debug/_deps/nana-subbuild/CMakeFiles/nana-populate
+C:/Users/Legion/CLionProjects/Project/cmake-build-debug/_deps/nana-subbuild/CMakeFiles/nana-populate.rule
+C:/Users/Legion/CLionProjects/Project/cmake-build-debug/_deps/nana-subbuild/CMakeFiles/nana-populate-complete.rule
+C:/Users/Legion/CLionProjects/Project/cmake-build-debug/_deps/nana-subbuild/nana-populate-prefix/src/nana-populate-stamp/nana-populate-build.rule
+C:/Users/Legion/CLionProjects/Project/cmake-build-debug/_deps/nana-subbuild/nana-populate-prefix/src/nana-populate-stamp/nana-populate-configure.rule
+C:/Users/Legion/CLionProjects/Project/cmake-build-debug/_deps/nana-subbuild/nana-populate-prefix/src/nana-populate-stamp/nana-populate-download.rule
+C:/Users/Legion/CLionProjects/Project/cmake-build-debug/_deps/nana-subbuild/nana-populate-prefix/src/nana-populate-stamp/nana-populate-install.rule
+C:/Users/Legion/CLionProjects/Project/cmake-build-debug/_deps/nana-subbuild/nana-populate-prefix/src/nana-populate-stamp/nana-populate-mkdir.rule
+C:/Users/Legion/CLionProjects/Project/cmake-build-debug/_deps/nana-subbuild/nana-populate-prefix/src/nana-populate-stamp/nana-populate-patch.rule
+C:/Users/Legion/CLionProjects/Project/cmake-build-debug/_deps/nana-subbuild/nana-populate-prefix/src/nana-populate-stamp/nana-populate-test.rule
+C:/Users/Legion/CLionProjects/Project/cmake-build-debug/_deps/nana-subbuild/nana-populate-prefix/src/nana-populate-stamp/nana-populate-update.rule

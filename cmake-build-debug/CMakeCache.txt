@@ -154,7 +154,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=nana-cmake
+CMAKE_PROJECT_NAME:STATIC=DOSAttacker
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=0.1
@@ -251,6 +251,24 @@ CMAKE_STRIP:FILEPATH=C:/Program Files/JetBrains/CLion 2021.3.2/bin/mingw/bin/str
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Value Computed by CMake
+DOSAttacker_BINARY_DIR:STATIC=C:/Users/Legion/CLionProjects/Project/cmake-build-debug
+
+//Value Computed by CMake
+DOSAttacker_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+DOSAttacker_SOURCE_DIR:STATIC=C:/Users/Legion/CLionProjects/Project
+
+//Value Computed by CMake
+DOS_BINARY_DIR:STATIC=C:/Users/Legion/CLionProjects/Project/cmake-build-debug
+
+//Value Computed by CMake
+DOS_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+DOS_SOURCE_DIR:STATIC=C:/Users/Legion/CLionProjects/Project
+
 //Directory under which to collect all populated content
 FETCHCONTENT_BASE_DIR:PATH=C:/Users/Legion/CLionProjects/Project/cmake-build-debug/_deps
 
@@ -332,6 +350,15 @@ Project_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=C:/Users/Legion/CLionProjects/Project
+
+//Value Computed by CMake
+doctest_BINARY_DIR:STATIC=C:/Users/Legion/CLionProjects/Project/cmake-build-debug/doctest
+
+//Value Computed by CMake
+doctest_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+doctest_SOURCE_DIR:STATIC=C:/Users/Legion/CLionProjects/Project/doctest
 
 //Value Computed by CMake
 nana-cmake_BINARY_DIR:STATIC=C:/Users/Legion/CLionProjects/Project/cmake-build-debug
@@ -458,7 +485,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

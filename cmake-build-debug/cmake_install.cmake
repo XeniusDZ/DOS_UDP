@@ -39,6 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("C:/Users/Legion/CLionProjects/Project/cmake-build-debug/doctest/cmake_install.cmake")
   include("C:/Users/Legion/CLionProjects/Project/cmake-build-debug/_deps/nana-build/cmake_install.cmake")
 
 endif()

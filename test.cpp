@@ -1,18 +1,15 @@
-/**#include "doctest.h"
-#include "udp.hpp"
+#include "doctest.h"
+#include "udp.h"
 
 TEST_CASE("Correct IP"){
-    CHECK(isIPv4("192.168.0.0") == true);
+    REQUIRE(isIPv4("192.168.0.0") == true);
 }
 TEST_CASE("Incorrect IP"){
-    CHECK(isIPv4("1956.10.10.159") == false);
+    REQUIRE(isIPv4("1956.10.10.159") == false);
 }
 TEST_CASE("Incorrect IP"){
-    CHECK(isIPv4("lol") == false);
+    REQUIRE(isIPv4("lol") == false);
 }
 TEST_CASE("test winsocket") {
-    CHECK(create_winsocket() == 1);
+    REQUIRE(create_winsocket() == 1);
 }
-TEST_CASE("test socket") {
-    CHECK(create_socket() == 1);
-}**/

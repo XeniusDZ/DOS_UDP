@@ -1,25 +1,18 @@
-cmake_minimum_required(VERSION 3.12  FATAL_ERROR)
+cmake_minimum_required(VERSION 3.10)
 
-project(nana-cmake
-        VERSION 0.1
-        LANGUAGES CXX
-        )
+project(DOSAttacker)
 
 include(FetchContent)
 
-if(MSVC)
-    FetchContent_Declare(
-            nana
-            GIT_REPOSITORY https://github.com/cnjinhao/nana.git
-            GIT_TAG        develop-1.8
-    )
-else()
-    FetchContent_Declare(
-            nana
-            GIT_REPOSITORY https://github.com/cnjinhao/nana.git
-            GIT_TAG        master
-    )
-endif()
+add_subdirectory(doctest)
+
+enable_testing()
+
+FetchContent_Declare(
+        nana
+        GIT_REPOSITORY https://github.com/cnjinhao/nana.git
+        GIT_TAG        master
+)
 
 FetchContent_GetProperties(nana)
 if(NOT nana_POPULATED)
@@ -27,18 +20,10 @@ if(NOT nana_POPULATED)
     add_subdirectory(${nana_SOURCE_DIR} ${nana_BINARY_DIR})
 endif()
 
+add_executable(main-test udp.h test.cpp)
+target_link_libraries(main-test doctest wsock32 ws2_32)
+add_test(NAME main-test COMMAND main-test --force-colors -d)
 
-
-add_executable(main
-        main.cpp
-        GUI.h doctest.h udp.h test.cpp)
-
-target_link_libraries(main
-        nana
-        )
-
-target_compile_features(main
-        PUBLIC
-        cxx_std_17
-        )
+add_executable(main main.cpp GUI.h doctest udp.h)
+target_link_libraries(main nana wsock32 ws2_32)
 

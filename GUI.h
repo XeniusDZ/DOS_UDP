@@ -7,6 +7,10 @@
 #include <nana/gui/widgets/textbox.hpp>
 #include <nana/gui/widgets/button.hpp>
 
+
+/**
+ * Class for making GUI
+ */
 class DOSATTACKER
         : public nana::form
 {
@@ -20,19 +24,15 @@ public:
     {
         init_();
 
-        //<*ctor
-
-        //*>
     }
 
     ~DOSATTACKER()
     {
-        //<*dtor
-
-        //*>
     }
 
-
+/**
+ * Creating GUI
+ */
 private:
     void init_()
     {
@@ -58,12 +58,6 @@ private:
         place_.collocate();
     }
 
-
-
-
-    //<*declarations
-
-    //*>
 };
 
 #endif //DOSATTACKER_H

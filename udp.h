@@ -24,7 +24,7 @@ auto create_winsocket(){
     return WinSock;
 }
 /**
- *
+ * Took it from StackOverFlow
  * @param ipAddress
  * @return If string is a valid ip address
  */
